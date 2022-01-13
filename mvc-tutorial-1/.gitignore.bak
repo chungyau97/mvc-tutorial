@@ -270,10 +270,6 @@ __pycache__/
 *.pyc
 
 Migrations/
-bin/
-obj/
-Debug/
-Release/
 
 # Cake - Uncomment if you are using it
 # tools/

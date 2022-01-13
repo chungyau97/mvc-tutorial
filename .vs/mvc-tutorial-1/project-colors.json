@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f5e27431-d8c7-42a5-9c7e-6786acb190c1": {
+      "ProjectGuid": "f5e27431-d8c7-42a5-9c7e-6786acb190c1",
+      "DisplayName": "mvc-tutorial-1",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

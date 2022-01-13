@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Interview Questions\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj": {}
+    "D:\\Tutorial\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Interview Questions\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj": {
+    "D:\\Tutorial\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Interview Questions\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj",
+        "projectUniqueName": "D:\\Tutorial\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj",
         "projectName": "mvc-tutorial-1",
-        "projectPath": "D:\\Work\\Interview Questions\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj",
+        "projectPath": "D:\\Tutorial\\mvc-tutorial-1\\mvc-tutorial-1\\mvc-tutorial-1.csproj",
         "packagesPath": "C:\\Users\\chung\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Interview Questions\\mvc-tutorial-1\\mvc-tutorial-1\\obj\\",
+        "outputPath": "D:\\Tutorial\\mvc-tutorial-1\\mvc-tutorial-1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,7 +46,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
