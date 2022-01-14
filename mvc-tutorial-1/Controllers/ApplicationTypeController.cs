@@ -37,5 +37,47 @@ namespace mvc_tutorial_1.Controllers
             _applicationDbContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Edit(Guid Id)
+        {
+            if (Id == Guid.Empty)
+            {
+                return NotFound();
+            }
+            ApplicationType applicationType = _applicationDbContext.ApplicationType.Find(Id);
+            if (applicationType == null)
+            {
+                return NotFound();
+            }
+            return View(applicationType);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(ApplicationType applicationType)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(applicationType);
+            }
+            _applicationDbContext.ApplicationType.Update(applicationType);
+            _applicationDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Guid Id)
+        {
+            if (Id == Guid.Empty)
+            {
+                return NotFound();
+            }
+            ApplicationType applicationType = _applicationDbContext.ApplicationType.Find(Id);
+            if (applicationType == null)
+            {
+                return NotFound();
+            }
+            _applicationDbContext.ApplicationType.Remove(applicationType);
+            _applicationDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,10 +1,11 @@
 ﻿@model mvc_tutorial_1.Models.ApplicationType
 
-<form method="post" asp-action="Create">
+<form method="post">
+    <input asp-for="Id" hidden />
     <div class="border p-3">
         <div class="form-group row">
             <h2 class="text-info pl-3">
-                Add Application Type
+                Edit Application Type
             </h2>
         </div>
 
@@ -23,7 +24,7 @@
                 <div class="form-group row">
                     <div class="col-8 offset-4 row">
                         <div class="col">
-                            <input type="submit" class="btn btn-info w-100" value="Create" />
+                            <input type="submit" class="btn btn-info w-100" value="Update" />
                         </div>
                         <div class="col">
                             <a asp-action="Index" class="btn btn-danger w-100">
