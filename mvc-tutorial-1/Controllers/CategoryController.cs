@@ -14,12 +14,24 @@ namespace mvc_tutorial_1.Controllers
         private readonly ApplicationDbContext _applicationDbContext;
         public CategoryController(ApplicationDbContext applicationDbContext)
         {
-            _applicationDbContext = applicationDbContext; 
+            _applicationDbContext = applicationDbContext;
         }
         public IActionResult Index()
         {
             IEnumerable<Category> category = _applicationDbContext.Catergory;
             return View(category);
+        }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Category category)
+        {
+            _applicationDbContext.Add(category);
+            _applicationDbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
