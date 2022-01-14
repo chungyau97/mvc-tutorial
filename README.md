@@ -6,7 +6,7 @@ A simple CRUD ASP.NET Core MVC of category and application type.
 ### Built With
 
 * [ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-6.0#:~:text=The%20ASP.NET%20Core%20MVC,a%20clean%20separation%20of%20concerns.)
-* [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
+* [YouTube Tutorial](https://www.youtube.com/watch?v=Pi46L7UYP8I)
 
 <!-- GETTING STARTED -->
 ## Getting Started
