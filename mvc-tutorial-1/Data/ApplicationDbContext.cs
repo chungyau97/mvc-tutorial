@@ -15,5 +15,6 @@ namespace mvc_tutorial_1.Data
 
         }
         public DbSet<Category> Catergory { get; set; }
+        public DbSet<ApplicationType> ApplicationType { get; set; }    
     }
 }
