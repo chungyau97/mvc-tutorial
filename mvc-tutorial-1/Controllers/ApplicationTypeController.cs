@@ -29,6 +29,10 @@ namespace mvc_tutorial_1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(ApplicationType applicationType)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(applicationType);
+            }
             _applicationDbContext.Add(applicationType);
             _applicationDbContext.SaveChanges();
             return RedirectToAction("Index");
