@@ -29,6 +29,10 @@ namespace mvc_tutorial_1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category category)
         {
+            if (!ModelState.IsValid) //Backend validation based on 'Category' model created rules
+            {
+                return View(category); 
+            }
             _applicationDbContext.Add(category);
             _applicationDbContext.SaveChanges();
             return RedirectToAction("Index");

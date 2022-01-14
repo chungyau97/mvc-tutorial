@@ -16,6 +16,7 @@ namespace mvc_tutorial_1.Models
         [StringLength(100)]
         public string Name { get; set; }
         [DisplayName("Display Order")]
+        [Range(1, long.MaxValue, ErrorMessage = "The Display Order field must be greater than 0.")]
         public int DisplayOrder { get; set; }
     }
 }
