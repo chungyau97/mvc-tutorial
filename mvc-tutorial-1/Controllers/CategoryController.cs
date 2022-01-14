@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using mvc_tutorial_1.Data;
+using mvc_tutorial_1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,15 @@ namespace mvc_tutorial_1.Controllers
 {
     public class CategoryController : Controller
     {
+        private readonly ApplicationDbContext _applicationDbContext;
+        public CategoryController(ApplicationDbContext applicationDbContext)
+        {
+            _applicationDbContext = applicationDbContext; 
+        }
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Category> category = _applicationDbContext.Catergory;
+            return View(category);
         }
     }
 }
