@@ -31,9 +31,51 @@ namespace mvc_tutorial_1.Controllers
         {
             if (!ModelState.IsValid) //Backend validation based on 'Category' model created rules
             {
-                return View(category); 
+                return View(category);
             }
             _applicationDbContext.Add(category);
+            _applicationDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Edit(Guid Id)
+        {
+            if(Id == Guid.Empty)
+            {
+                return NotFound();
+            }
+            Category category = _applicationDbContext.Catergory.Find(Id);
+            if(category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Category category)
+        {
+            if (!ModelState.IsValid) //Backend validation based on 'Category' model created rules
+            {
+                return View(category);
+            }
+            _applicationDbContext.Catergory.Update(category);
+            _applicationDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Guid Id)
+        {
+            if (Id == Guid.Empty)
+            {
+                return NotFound();
+            }
+            Category category = _applicationDbContext.Catergory.Find(Id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            _applicationDbContext.Catergory.Remove(category);
             _applicationDbContext.SaveChanges();
             return RedirectToAction("Index");
         }
